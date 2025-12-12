@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floriane MESLIN -  Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-inner">
+            <a href="#hero" class="logo">Floriane <span>MESLIN</span></a>
+
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav-links">
+                <a href="#hero">Accueil</a>
+                <a href="#about">A propos</a>
+                <a href="#projects">Projets</a>
+                <a href="#skills">Compétences</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="section hero">
+            <div class="hero-inner">
+                <div class="hero-avatar">
+                    <div class="hero-avatar-inner"></div>
+                </div>
+                <h1 class="hero-title">Floriane <span>MESLIN</span></h1>
+                <p class="hero-subtitle">BUT Informatique - Deuxième Année</p>
+                <p class="hero-text">
+                    Etudiante passionnée en informatique, je développe mes compétences en programmation, développement web et gestion de bases de données. Toujours curieuse d'apprendre
+                    de nouvelles technologies et de relever des défis techniques innovants.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn primary">Découvrir mes projets</a>
+                </div>
+
+                <div class="scroll-indicator">
+                    <span>&#x2193;</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">A Propos de Moi</h2>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-icon">🎓</div>
+                        <h3>Parcours Scolaire</h3>
+                        <p>
+                            Baccalauréat Technologique STI2D (Sciences et Technologies de l'Industrie et du Développement Durable) avec spécialité SIN (Système d'Information et Numérique), 
+                            obtenu avec mention assez bien. Formation solide en mathématique et en science du numérique.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">💻</div>
+                        <h3>Projets Personnels</h3>
+                        <p>
+                            Développement d'applucations web pour ma famille et mes proches,
+                            création de sites vitrines, mini-projets avec Python et
+                            expérimentation de nouvelles technologies.
+                        </p>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-icon">👩‍💻</div>
+                        <h3>Profil</h3>
+                        <p>
+                            Etudiante rigoureuse et  créative, j'aime résoudre des problèmes complexes
+                            et apprendre de nouvelles technologies. Recherche de stage et d'opportunités professionnelles.  
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Projects Universitaires (SAÉ)</h2>
+
+                <div class="projects-layout">
+                    <div class="projects-list">
+                        <button class="project-item active"  data-project="projet1">
+                            <h3> SAÉ 1 - Implémentation</h3>
+                            <p>
+                                 Développement en Python d'un programme modélisant
+                                 un réseau social et analysant les relations entre ses membres.
+                            </p>
+                            <div class="tags">
+                                <span cclass="tags">Python</span>
+                            </div>
+                        </button>
+
+                        <button class="project-item" data-project="projet2">
+                            <h3>SAÉ 2 - Installation d'un poste</h3>
+                            <p> 
+                                Installation complète d'un système Linux avec environnement de développement Web 
+                                et outils de programmation.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">Linux</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">PHP</span>
+                            </div>
+                        </button>
+
+                        <button class="project-item" data-project="projet3">
+                            <h3>SAÉ 3 - Création d'une base de données</h3>
+                            <p>
+                                Conception d'une base de données à partir de fichiers CSV sur 
+                                les catastrophes climatiques.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">SQL</span>
+                                <span class="tag">MySQL Workbench</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                        </button>
+
+                        <button class="project-item" data-project="projet4">
+                            <h3>SAÉ 4 - Installation de services réseau</h3>
+                            <p>
+                                Transformation d'un poste Linux en véritable serveur de 
+                                développement web.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">MariaDB</span>
+                                <span class="tag">Linux</span>                                
+                            </div>
+                        </button>
+
+                        <button class="project-item" data-project="projet5">
+                            <h3>SAÉ 5 - Exploitation d'une base de données</h3>
+                            <p>
+                                Analyse d'une base de données d'un réseau social pour répondre à des problématiques d'engagement.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">SQL</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">MySQL Workbench</span>
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <acticle class="project-detail" id="project-detail">
+
+                    </acticle>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Référentiel des Compétences</h2>
+                <p class="section-subtitle">
+                    But Informatique - Développemment des 6 compétences du référentiel national
+                </p>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div claaass="skill-header">
+                            <div  class="skill-icon">&lt;/&gt;</div>
+                            <div>
+                                <h3>Réaliser un développement d'application</h3>
+                                <p>Développement d'application web et logiciel</p>
+                            </div>
+                        </div>
+                        <span class="skill-status">En cours d'acquisition</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress:60%"></div>
+                        </div>
+                        <p classs="skill-detail-title">Détails techniques:</p>
+                        <div class="tags">
+                            <span class="tag">HTML/CSS/JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Frameworks web</span>
+                            <span class="tag">Tests unitaires</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">⚡</div>
+                            <div>
+                                <h3>Optimiser des applications informatiques</h3>
+                                <p>Optimisation des performances et algorithmes</p>
+                            </div>
+                        </div>
+                        <span class="skill-status">Partiellement acquise</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress:55%"></div>
+                        </div>
+                        <p class="skill-details-title">Détails techniques:</p>
+                        <div class="tags">
+                            <span class="tag">Analyse de complexité</span>
+                            <span class="tag">Optimisation de code</span>
+                            <span class="tag">Profiling</span>
+                            <span class="tag">Structures de données</span>                            
+                        </div>
+
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">🖧</div>
+                            <div>
+                                <h3>Administrer des systèmes informatiques communicants</h3>
+                                <p>Administration système et réseaux</p>
+                            </div>
+                        </div>
+                        <span class="skill-status">Partiellement acquise</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress:80%"></div>
+                        </div>
+                        <p class="skill-details-title">Détails techniques:</p>
+                        <div class="tags">
+                            <span class="tag">Linux/Windows</span>
+                            <span class="tag">Configuration serveurs</span>
+                            <span class="tag">Sécurité</span>
+                            <span class="tag">Virtualisation</span>                            
+                        </div>
+                    </article>
+                    
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">🗄️</div>
+                            <div>
+                                <h3>Gérer des données de l'information</h3>
+                                <p>Gestion et analyse de bases de données</p>
+                            </div>
+                        </div>
+                        <span class="skill-status">En cours d'acquisition</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress:45%"></div>
+                        </div>
+                        <p class="skill-details-title">Détails techniques:</p>
+                        <div class="tags">
+                            <span class="tag">SQL avancé</span>
+                            <span class="tag">Modélisation BD</span>
+                            <span class="tag">MySQL</span>                      
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">📌</div>
+                            <div>
+                                <h3>Conduire un projet</h3>
+                                <p>Gestion de projet informatique</p>
+                            </div>
+                        </div>
+                        <span class="skill-status">Acquise</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress:90%"></div>
+                        </div>
+                        <p class="skill-details-title">Détails techniques:</p>
+                        <div class="tags">
+                            <span class="tag">Méthodologie</span>
+                            <span class="tag">Planification</span>
+                            <span class="tag">Communication</span> 
+                            <span class="tag">Documentation</span>                                                  
+                        </div>
+                    </article>
+                
+                    <article class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">🌍</div>
+                            <div>
+                                <h3>Travailler dans une équipe informatique</h3>
+                                <p>Collaboration et travail d'équipe</p>
+                            </div>
+                        </div>
+                        <span class="skill-status">Partiellement acquise</span>
+                        <div class="progress">
+                            <div class="progress-bar" style="--progress:80%"></div>
+                        </div>
+                        <p class="skill-details-title">Détails techniques:</p>
+                        <div class="tags">
+                            <span class="tag">Git/GitHub</span>
+                            <span class="tag">Code review</span>
+                            <span class="tag">Communication</span> 
+                            <span class="tag">Résolution de conflits</span>                                                  
+                        </div>
+                    </article> 
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">
+                    Intéressé par mon profil? N'hésitez pas à me contacter pour discuter d'opportunités de stage ou d'emploi.
+                </p>
+
+                <div class="contact-grid">
+                <a href="mailto:meslinfloriane@gmail.com" class="contact-card">
+                    <div class="contact-card-icon">✉️</div>
+                    <div class="contact-card-contend">
+                        <h3>Email</h3>
+                        <p class="contact-value">meslinfloriane@gmail.com</p>
+                        <p class="contact-helper">N'hésitez pas à me contacter</p>
+                    </div>
+                    <span class="contact-card-link">↗</span>
+                </a>
+
+                <a href="tel:0648102318" class="contact-card">
+                    <div class="contact-card-icon">📞</div>
+                    <div class="contact-card-content">
+                        <h3>Téléphone</h3>
+                        <p class="contact-value">0648102318</p>
+                        <p class="contact-helper">Disponible tout le temps</p>
+                    </div>
+                    <span class="contact-card-link">↗</span>
+                </a>
+
+                <a href="https://www.google.com/maps?q=Paris,+France" target="_blanc" class="contact-card">
+                    <div class="contact-card-icon">📍</div>
+                    <div class="contact-card-content">
+                        <h3>Localisation</h3>
+                        <p class="contact-value">[Paris, France]</p>
+                        <p class="contact-helper"> Mobile pour stage / alternance</p>
+                    </div>
+                    <span class="contact-card-link">↗</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/floriane-meslin" target="_blank" class="contact-card">
+                    <div class="contact-card-icon">🔗</div>
+                    <div class="contact-card-content">
+                        <h3>LinkedIn</h3>
+                        <p cmass="content-value">/floriane-meslin</p>
+                        <p class="contact-helper">Profil professionnel</p>
+                    </div>
+                    <span class="contact-card-link">↗</span>
+                </a>
+            </div>
+
+            <div class="contact-cta">
+                <h3>Recherche active  de stage</h3>
+                <p>
+                    Je recherche un stage dans l'informatique (développement web, réseaux ...) pour le 26 Janvier pour une durée de 8 à 10 semaines. Motivée, et désireuse d'apprendre, je suis prête à contribuer à vos projets avec enthousiasme.
+                </p>
+                <a href="mailto:meslinfloriane@gmail.com" class="btn primary">
+                    ✉ Me contacter
+                </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
