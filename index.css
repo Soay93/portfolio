@@ -153,8 +153,11 @@ body {
   width: 92%;
   height: 92%;
   border-radius: inherit;
-  background: radial-gradient(circle at 30% 20%, #1f2937, #020617);
   border: 2px solid rgba(15, 23, 42, 0.8);
+  background-image: url("images/photo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -610,6 +613,7 @@ body {
     padding-inline: 1rem;
   }
 }
+
 
 
 
