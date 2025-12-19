@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
             ],
             skills:[
                 "Gérer des systèmes Linux",
-                "Manipumer me terminal",
+                "Manipuler le terminal",
                 "Installer et configurer des services essentiels pour le développement"
             ],
             level: "Acquis partiellement"
@@ -166,4 +166,5 @@ document.addEventListener("DOMContentLoaded", ()=> {
         const firstKey =   projectButtons[0].dataset.project;
         renderProject(firstKey);
     }
+
 });
