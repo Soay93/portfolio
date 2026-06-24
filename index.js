@@ -119,6 +119,30 @@ document.addEventListener("DOMContentLoaded", ()=> {
             ],
             level: "En cours d'acquisition"
         },
+
+        projet6: {
+            title: "SAÉ 6 - RYTHMO",
+            subtitle:
+            "Application web de gestion et de diffusion sonore automatisée pour des espaces commerciaux ou publics.",
+            tasks:
+            "RYTHMO est un projet complet permettant à plusieurs organisations de gérer leurs lecteurs audio, leurs playlists, leurs publicités et leurs alertes depuis une interface web centralisée. Le système doit assurer une diffusion continue et rester fiable même en cas de problème réseau.",
+            objectives:[
+            "Créer une interface de gestion pour les organisations et les administrateurs",
+            "Contrôler à distance des lecteurs audio, notamment sur Raspberry Pi",
+            "Planifier des playlists selon les jours, horaires et événements",
+            "Gérer les publicités, messages audio et alertes prioritaires",
+            "Mettre en place une authentification avec rôles, sessions et sécurité",
+            "Suivre les actions du système grâce aux logs et à la traçabilité"
+            ],
+            skills:[
+                "Développement d'une application web complète avec Python et Flask",
+                "Gestion des utilisateurs, rôles et accès sécurisés",
+                "Conception d'interfaces responsives et de tableaux de bord",
+                "Organisation d'un projet complexe en équipe",
+                "Réflexion sur la continuité de service et la fiabilité d'un système"
+            ],
+            level: "Acquis"
+        },
     };
 
     const projectButtons = document.querySelectorAll(".project-item");
