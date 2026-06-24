@@ -562,6 +562,44 @@ body {
   line-height: 1.65;
 }
 
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.objective-card {
+  background: radial-gradient(circle at top left, #0f172a, #020617 60%);
+  border: 1px solid var(--border-soft);
+  border-radius: 1.2rem;
+  padding: 1.35rem 1.45rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.objective-label {
+  display: inline-flex;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 999px;
+  padding: 0.28rem 0.65rem;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.08);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.objective-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.05rem;
+}
+
+.objective-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
 
 .contact-grid {
     max-width: 900px;
@@ -687,6 +725,10 @@ body {
   .competency-card-header {
     flex-direction: column;
     gap: 0.6rem;
+  }
+
+  .objectives-grid {
+    grid-template-columns: 1fr;
   }
 
 }
