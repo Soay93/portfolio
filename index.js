@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
             subtitle:
             "Programme expérimental en Python utilisant la vision par ordinateur pour détecter des ressources à l'écran.",
             tasks:
-            "Ce projet permet de détecter des ressources dans une fenêtre de jeu grâce à un modèle YOLO, puis d'organiser les déplacements et les interactions à partir des coordonnées récupérées. Une interface graphique permet de configurer le programme et de suivre son exécution.",
+            "Ce projet permet de détecter des ressources dans une fenêtre de jeu grâce à un modèle YOLO, puis d'organiser les déplacements et les interactions à partir des coordonnées récupérées. Une interface graphique permet de configurer le programme et de suivre son exécution. Ce projet personnel a été réalisé en binome.",
             objectives:[
             "Détecter des ressources à l'écran avec un modèle YOLO",
             "Créer une interface graphique de configuration avec PySide6",
