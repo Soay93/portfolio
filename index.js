@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
         projet1: {
             title: "SAÉ 1 - Implémentation",
             subtitle:
-            "1Développement en python d'un programme permettant de modéliser un réseau social et d'analyser les relations entre ses membres.",
+            "Développement en Python d'un programme permettant de modéliser un réseau social et d'analyser les relations entre ses membres.",
             tasks:
             "Ce projet vise à analyser un réseau social modélisé par des structures de données Python. Il s'agit d'un travail réalisé en binôme dans le cadre du BUT Informatique à l'IUT de Villetaneuse.",
             objectives:[
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
             "Déterminer les personnes les plus populaires"
             ],
             skills:[
-                "Python (structures conditionnelles, boucles, listes, dicionnaires, fichiers)",
+                "Python (structures conditionnelles, boucles, listes, dictionnaires, fichiers)",
                 "Logique algorithmique et tests unitaires",
             ],
             level: "Acquis partiellement"
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
             "Cette SAÉ avait pour objectif de concevoir une base de données complète à partir de fichiers CSV, puis d'exploiter cette base pour produire des statistiques et des indicateurs.",
             objectives:[
             "Modélisation conceptuelle (entités-associations)",
-            "Création des ables SQL manuellement et via un AGL",
+            "Création des tables SQL manuellement et via un AGL",
             "Comparaison des scripts manuels et générés automatiquement",
             "Peuplement de la base à partir d'un fichier CSV",
             "Utilisation de clés primaires/étrangères et choix de types adaptés"
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
             skills:[
                 "Modéliser une base de données relationnelle",
                 "Compréhension des différences entre PostgreSQL et MySQL Workbench",
-                "tests unitaires"
+                "Tests unitaires"
             ],
             level: "En cours d'acquisition"
         },
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
             tasks:
             "Installation et configuration de services réseau sur un poste Linux : serveur web Apache, base de données MariaDB, PHP, serveur FTP, accès SSH sécurisé et environnement complet de développement.",
             objectives:[
-            "Installer e configurer Apache2 (serveur web)",
+            "Installer et configurer Apache2 (serveur web)",
             "Mettre en place une base MariaDB (équivalent libre de MySQL)",
             "Relier PHP à la base via PDO",
             "Créer un utilisateur système avec base de données dédiée",
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
             objectives:[
             "Comparer les commentaires selon le genre et la région",
             "Mesurer la corrélation entre nombre de commentaires et niveau d'engagement",
-            "Etudier l'impact des clics publicitaires sur les téléchargements"
+            "Étudier l'impact des clics publicitaires sur les téléchargements"
             ],
             skills:[
                 "Manipuler des données réelles",
@@ -137,12 +137,12 @@ document.addEventListener("DOMContentLoaded", ()=> {
         <p class="project-detail-subtitle">${project.subtitle}</p>
         <h4 class="project-detail-section-title">Tâches</h4>
         <p class="project-detail-text">${project.tasks}</p>
-        <h4 class="project-detail-section-title">Objectif</h4>
+        <h4 class="project-detail-section-title">Objectifs</h4>
         <ul class="project-detail-list">
             ${renderList(project.objectives)}
         </ul>
 
-        <h4 class="project-detail-ssection-title">Compétences</h4>
+        <h4 class="project-detail-section-title">Compétences</h4>
         <ul class="project-detail-list">
             ${renderList(project.skills)}
         </ul>
