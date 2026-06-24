@@ -145,16 +145,132 @@ document.addEventListener("DOMContentLoaded", ()=> {
         },
     };
 
-    const projectButtons = document.querySelectorAll(".project-item");
-    const projectDetail = document.getElementById("project-detail");
+    const personalProjectsData = {
+        epave: {
+            title: "Site vitrine - Récupération d'épaves",
+            subtitle:
+            "Prototype de site vitrine pour un service de récupération d'épaves gratuit.",
+            tasks:
+            "Ce projet avait pour objectif de présenter clairement un service, ses zones d'intervention, ses modalités et les documents nécessaires pour la prise en charge d'un véhicule. Le site a été pensé pour être simple, responsive et orienté prise de contact.",
+            objectives:[
+            "Présenter un service de récupération d'épaves de manière claire",
+            "Mettre en avant les zones d'intervention et les informations pratiques",
+            "Créer une navigation simple avec une page dédiée aux modalités",
+            "Faciliter le contact grâce à des boutons d'appel et d'e-mail",
+            "Travailler un design responsive adapté aux téléphones et ordinateurs"
+            ],
+            skills:[
+                "Structuration d'un site vitrine en HTML",
+                "Mise en page responsive avec CSS",
+                "Ajout d'interactions simples en JavaScript",
+                "Réflexion sur l'expérience utilisateur et la clarté des informations"
+            ],
+            level: "Projet personnel",
+            link: "https://github.com/Soay93/epave"
+        },
+
+        dofus: {
+            title: "Bot de récolte Dofus",
+            subtitle:
+            "Programme expérimental en Python utilisant la vision par ordinateur pour détecter des ressources à l'écran.",
+            tasks:
+            "Ce projet permet de détecter des ressources dans une fenêtre de jeu grâce à un modèle YOLO, puis d'organiser les déplacements et les interactions à partir des coordonnées récupérées. Une interface graphique permet de configurer le programme et de suivre son exécution.",
+            objectives:[
+            "Détecter des ressources à l'écran avec un modèle YOLO",
+            "Créer une interface graphique de configuration avec PySide6",
+            "Gérer les captures d'écran, les coordonnées et les interactions utilisateur",
+            "Organiser la navigation entre plusieurs cartes",
+            "Structurer un projet Python plus complexe avec plusieurs responsabilités"
+            ],
+            skills:[
+                "Python et programmation orientée objet",
+                "Vision par ordinateur avec YOLO et OpenCV",
+                "Création d'interface graphique",
+                "Gestion de fichiers de configuration",
+                "Multithreading et organisation d'un projet complexe"
+            ],
+            level: "Projet personnel",
+            link: "https://github.com/djerwane0/dofus-recolte-bot"
+        },
+    };
+
+    const internshipProjectsData = {
+        chrome: {
+            title: "Extension Chrome - Prix fournisseurs",
+            subtitle:
+            "Extension Chrome développée pendant mon stage pour afficher automatiquement des prix fournisseurs.",
+            tasks:
+            "L'extension lit un fichier Excel contenant des références et des tarifs, puis ajoute une colonne de prix directement dans une plateforme web. Le projet mobilise les scripts d'extension Chrome, la lecture de fichiers XLS et la modification dynamique du contenu d'une page.",
+            objectives:[
+            "Charger et exploiter un fichier Excel depuis une extension Chrome",
+            "Identifier les références produits affichées sur une page web",
+            "Ajouter automatiquement une colonne de prix dans un tableau existant",
+            "Faire communiquer le script de contenu avec le service worker",
+            "Rendre l'outil utile dans un contexte professionnel réel"
+            ],
+            skills:[
+                "JavaScript et manipulation du DOM",
+                "Développement d'extension Chrome Manifest V3",
+                "Lecture de données Excel",
+                "Communication entre scripts d'extension",
+                "Adaptation à une plateforme web existante"
+            ],
+            level: "Projet de stage",
+            link: "https://github.com/Soay93/stage-extension-chrome"
+        },
+
+        whatsapp: {
+            title: "Bot WhatsApp professionnel",
+            subtitle:
+            "Contribution backend à un bot WhatsApp existant dans un contexte professionnel.",
+            tasks:
+            "J'ai travaillé sur la partie backend du bot : sécurisation des webhooks, création de routes, ajout de tâches planifiées et amélioration de la fiabilité des échanges avec l'API WhatsApp. Le projet étant privé, il est présenté sans lien public.",
+            objectives:[
+            "Sécuriser les webhooks utilisés par le bot",
+            "Créer et organiser des routes backend",
+            "Mettre en place des tâches planifiées avec des cron jobs",
+            "Comprendre l'intégration d'une API externe dans un projet existant",
+            "Renforcer la fiabilité d'un outil utilisé en contexte professionnel"
+            ],
+            skills:[
+                "Développement backend",
+                "Sécurisation de webhooks",
+                "Utilisation d'une API externe",
+                "Mise en place de cron jobs",
+                "Lecture et adaptation d'un projet déjà existant"
+            ],
+            level: "Projet de stage - dépôt privé"
+        },
+    };
+
+    const projectGroups = {
+        academic: {
+            data: projectsData,
+            detail: document.getElementById("project-detail")
+        },
+        personal: {
+            data: personalProjectsData,
+            detail: document.getElementById("personal-project-detail")
+        },
+        internship: {
+            data: internshipProjectsData,
+            detail: document.getElementById("internship-project-detail")
+        },
+    };
 
     function renderList(items){
         return items.map((item)=> `<li>${item}</li>`).join("");
     }
 
-    function renderProject(key) {
-        const project = projectsData[key];
+    function renderProject(groupName, key) {
+        const group = projectGroups[groupName];
+        const project = group?.data[key];
+        const projectDetail = group?.detail;
         if (!project || !projectDetail) return;
+
+        const link = project.link
+            ? `<a href="${project.link}" target="_blank" class="project-detail-link">Voir le dépôt GitHub</a>`
+            : "";
 
         projectDetail.innerHTML = `
         <h3 class="project-detail-title">${project.title}</h3>
@@ -174,22 +290,31 @@ document.addEventListener("DOMContentLoaded", ()=> {
         <p class="project-detail-level">
             Niveau : <span>${project.level}</span>
         </p>
+        ${link}
         `;
     }
 
-    projectButtons.forEach((btn)=> {
+    document.querySelectorAll(".project-item").forEach((btn)=> {
         btn.addEventListener("click", () => {
-            projectButtons.forEach((b) => b.classList.remove("active"));
+            const groupName = btn.dataset.group || "academic";
+            document.querySelectorAll(`.project-item[data-group="${groupName}"], .project-item:not([data-group])`)
+                .forEach((b) => {
+                    if ((b.dataset.group || "academic") === groupName) {
+                        b.classList.remove("active");
+                    }
+                });
             btn.classList.add("active");
             const key = btn.dataset.project;
-            renderProject(key);
+            renderProject(groupName, key);
         });
     });
 
-    if (projectButtons.length > 0) {
-        const firstKey =   projectButtons[0].dataset.project;
-        renderProject(firstKey);
-    }
+    Object.keys(projectGroups).forEach((groupName) => {
+        const firstButton = document.querySelector(`.project-item${groupName === "academic" ? ":not([data-group])" : `[data-group="${groupName}"]`}`);
+        if (firstButton) {
+            renderProject(groupName, firstButton.dataset.project);
+        }
+    });
 
 });
 

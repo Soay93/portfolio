@@ -180,38 +180,35 @@
                     Projets réalisés en autonomie pour expérimenter, progresser et répondre à des besoins concrets.
                 </p>
 
-                <div class="showcase-grid">
-                    <article class="showcase-card">
-                        <p class="showcase-kicker">Site vitrine</p>
-                        <h3>Récupération d'épaves</h3>
-                        <p>
-                            Création d'un prototype de site vitrine pour un service de récupération d'épaves gratuit.
-                            Le projet met en avant les zones d'intervention, les modalités, les documents nécessaires
-                            et les moyens de contact.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Responsive</span>
-                        </div>
-                        <a href="https://github.com/Soay93/epave" target="_blank" class="text-link">Voir le dépôt GitHub</a>
-                    </article>
+                <div class="projects-layout">
+                    <div class="projects-list">
+                        <button class="project-item active" data-project="epave" data-group="personal">
+                            <h3>Site vitrine - Récupération d'épaves</h3>
+                            <p>
+                                Prototype de site vitrine orienté contact et présentation d'un service.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </button>
 
-                    <article class="showcase-card">
-                        <p class="showcase-kicker">Python et vision par ordinateur</p>
-                        <h3>Bot de récolte Dofus</h3>
-                        <p>
-                            Développement expérimental d'un programme Python capable de détecter des ressources à l'écran
-                            avec YOLO, de gérer une interface graphique et d'organiser une navigation entre plusieurs cartes.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">YOLO</span>
-                            <span class="tag">OpenCV</span>
-                            <span class="tag">PySide6</span>
-                        </div>
-                        <a href="https://github.com/djerwane0/dofus-recolte-bot" target="_blank" class="text-link">Voir le dépôt GitHub</a>
+                        <button class="project-item" data-project="dofus" data-group="personal">
+                            <h3>Bot de récolte Dofus</h3>
+                            <p>
+                                Programme Python expérimental avec détection de ressources par vision par ordinateur.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">YOLO</span>
+                                <span class="tag">OpenCV</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <article class="project-detail" id="personal-project-detail">
+
                     </article>
                 </div>
             </div>
@@ -224,39 +221,35 @@
                     Projets réalisés ou approfondis dans un contexte professionnel, avec une attention particulière portée à la fiabilité et à la sécurité.
                 </p>
 
-                <div class="showcase-grid">
-                    <article class="showcase-card">
-                        <p class="showcase-kicker">Extension Chrome</p>
-                        <h3>Affichage automatique de prix fournisseurs</h3>
-                        <p>
-                            Développement d'une extension Chrome pour afficher automatiquement des prix fournisseurs
-                            depuis un fichier Excel sur une plateforme web interne. Le projet mobilise la lecture de données,
-                            l'injection de contenu dans une page et la communication entre scripts d'extension.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Chrome Extension</span>
-                            <span class="tag">Excel</span>
-                            <span class="tag">DOM</span>
-                        </div>
-                        <a href="https://github.com/Soay93/stage-extension-chrome" target="_blank" class="text-link">Voir le dépôt GitHub</a>
-                    </article>
+                <div class="projects-layout">
+                    <div class="projects-list">
+                        <button class="project-item active" data-project="chrome" data-group="internship">
+                            <h3>Extension Chrome - Prix fournisseurs</h3>
+                            <p>
+                                Affichage automatique de prix depuis un fichier Excel sur une plateforme web.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Chrome</span>
+                                <span class="tag">Excel</span>
+                            </div>
+                        </button>
 
-                    <article class="showcase-card">
-                        <p class="showcase-kicker">Backend</p>
-                        <h3>Bot WhatsApp professionnel</h3>
-                        <p>
-                            Participation à la partie backend d'un bot WhatsApp existant : sécurisation des webhooks,
-                            création de routes, mise en place de tâches planifiées et amélioration de la fiabilité des échanges
-                            avec l'API WhatsApp.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Backend</span>
-                            <span class="tag">API WhatsApp</span>
-                            <span class="tag">Webhooks</span>
-                            <span class="tag">Cron jobs</span>
-                        </div>
-                        <p class="showcase-note">Projet privé réalisé en contexte professionnel.</p>
+                        <button class="project-item" data-project="whatsapp" data-group="internship">
+                            <h3>Bot WhatsApp professionnel</h3>
+                            <p>
+                                Travail backend sur un bot existant : webhooks, routes et tâches planifiées.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">Backend</span>
+                                <span class="tag">API WhatsApp</span>
+                                <span class="tag">Cron jobs</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <article class="project-detail" id="internship-project-detail">
+
                     </article>
                 </div>
             </div>
