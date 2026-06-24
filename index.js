@@ -264,8 +264,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
     function renderProject(groupName, key) {
         const group = projectGroups[groupName];
-        const project = group?.data[key];
-        const projectDetail = group?.detail;
+        if (!group) return;
+
+        const project = group.data[key];
+        const projectDetail = group.detail;
         if (!project || !projectDetail) return;
 
         const link = project.link
@@ -297,24 +299,23 @@ document.addEventListener("DOMContentLoaded", ()=> {
     document.querySelectorAll(".project-item").forEach((btn)=> {
         btn.addEventListener("click", () => {
             const groupName = btn.dataset.group || "academic";
-            document.querySelectorAll(`.project-item[data-group="${groupName}"], .project-item:not([data-group])`)
-                .forEach((b) => {
-                    if ((b.dataset.group || "academic") === groupName) {
-                        b.classList.remove("active");
-                    }
-                });
+            const groupSelector = groupName === "academic"
+                ? ".project-item:not([data-group])"
+                : `.project-item[data-group="${groupName}"]`;
+
+            document.querySelectorAll(groupSelector).forEach((b) => {
+                b.classList.remove("active");
+            });
+
             btn.classList.add("active");
             const key = btn.dataset.project;
             renderProject(groupName, key);
         });
     });
 
-    Object.keys(projectGroups).forEach((groupName) => {
-        const firstButton = document.querySelector(`.project-item${groupName === "academic" ? ":not([data-group])" : `[data-group="${groupName}"]`}`);
-        if (firstButton) {
-            renderProject(groupName, firstButton.dataset.project);
-        }
-    });
+    renderProject("academic", "projet1");
+    renderProject("personal", "epave");
+    renderProject("internship", "chrome");
 
 });
 
